@@ -16,3 +16,23 @@ terraform.tfvars
 
 # Crash logs
 crash.log
+
+# Terraform credentials
+terraform.env
+*.env
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+
+# Terraform plans
+*.tfplan
+tfplan
+tfplan.json
+
+# Terraform working directory
+.terraform/
+
+# Sensitive variable files
+terraform.tfvars
+*.auto.tfvars
