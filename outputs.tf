@@ -39,21 +39,6 @@ locals {
   }
 }
 
-output "webserver_info" {
-  description = "Webserver identity, configured start state (not runtime or guest health), Guest Agent IPs, and SSH details."
-  value       = local.vm_information.webserver
-}
-
-output "postgres_info" {
-  description = "PostgreSQL identity, configured start state (not runtime or guest health), Guest Agent IPs, and SSH details."
-  value       = local.vm_information.postgres
-}
-
-output "ansible_controller_info" {
-  description = "Ansible controller identity, configured start state (not runtime or guest health), Guest Agent IPs, and SSH details."
-  value       = local.vm_information.ansible_controller
-}
-
 output "all_vm_info" {
   description = "Identity, configured start state (not runtime or guest health), Guest Agent IPs, and SSH details for all VMs."
   value       = local.vm_information
