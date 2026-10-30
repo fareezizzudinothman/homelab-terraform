@@ -1,8 +1,18 @@
 terraform {
+  required_version = ">= 1.15.8, < 1.16.0"
+
   required_providers {
     proxmox = {
       source  = "bpg/proxmox"
       version = "= 0.117.0"
+    }
+  }
+
+  cloud {
+    organization = "fareezio-homelab"
+
+    workspaces {
+      name = "homelab-proxmox"
     }
   }
 }
