@@ -1,0 +1,16 @@
+[webservers]
+webserver-01 ansible_host=${webserver_ip}
+
+[postgres]
+postgres-01 ansible_host=${postgres_ip}
+
+[ansible]
+ansible-controller ansible_host=${ansible_ip}
+
+[linux_servers:children]
+webservers
+postgres
+
+[all:vars]
+ansible_user=fareezio
+ansible_python_interpreter=/usr/bin/python3

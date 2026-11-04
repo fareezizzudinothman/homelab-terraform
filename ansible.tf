@@ -81,6 +81,12 @@ resource "proxmox_virtual_environment_vm" "ansible" {
     dedicated = 1024
   }
 
+  disk {
+    datastore_id = var.proxmox_vm_datastore
+    interface    = "scsi0"
+    size         = 20
+  }
+
   agent {
     enabled = true
     type    = "virtio"

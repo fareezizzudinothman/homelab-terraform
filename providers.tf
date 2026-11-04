@@ -7,14 +7,6 @@ terraform {
       version = "= 0.117.0"
     }
   }
-
-  cloud {
-    organization = "fareezio-homelab"
-
-    workspaces {
-      name = "homelab-proxmox"
-    }
-  }
 }
 
 provider "proxmox" {
