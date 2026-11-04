@@ -1,25 +1,28 @@
-# Terraform working directory
+# Terraform directories
 .terraform/
+.terraform.old/
 
-# Terraform state and backups
+# Terraform state
 *.tfstate
 *.tfstate.*
+*.tfstate.backup
+
+# Terraform variables
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
 
 # Terraform plans
 *.tfplan
 tfplan
-tfplan.json
 
-# Sensitive variable files
-terraform.tfvars
-*.auto.tfvars
+# Sensitive files
+.env
+.env.*
+*.pem
+*.key
 terraform.env
-*.env
 
 # Crash logs
 crash.log
 crash.*.log
-
-# Terraform credentials
-.terraformrc
-terraform.rc
