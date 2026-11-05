@@ -78,7 +78,7 @@ resource "proxmox_virtual_environment_vm" "ansible" {
   }
 
   memory {
-    dedicated = 1024
+    dedicated = 2048
   }
 
   disk {
