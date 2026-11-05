@@ -81,6 +81,12 @@ resource "proxmox_virtual_environment_vm" "webserver" {
     dedicated = 2048
   }
 
+  disk {
+    datastore_id = var.proxmox_vm_datastore
+    interface    = "scsi0"
+    size         = 60
+  }
+
   agent {
     enabled = true
     type    = "virtio"
