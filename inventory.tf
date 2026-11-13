@@ -1,5 +1,5 @@
 resource "local_file" "ansible_inventory" {
-  filename = "${path.module}/../ansible/inventory.ini"
+  filename = "${path.module}/../homelab-ansible/inventory.ini"
 
   content = templatefile("${path.module}/inventory.ini.tftpl", {
     webserver_ip = local.vm_information.webserver.lan_ipv4

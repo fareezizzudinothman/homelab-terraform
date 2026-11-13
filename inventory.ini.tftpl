@@ -1,4 +1,4 @@
-[webservers]
+[webserver]
 webserver-01 ansible_host=${webserver_ip}
 
 [postgres]
@@ -8,7 +8,7 @@ postgres-01 ansible_host=${postgres_ip}
 ansible-controller ansible_host=${ansible_ip}
 
 [linux_servers:children]
-webservers
+webserver
 postgres
 
 [all:vars]
